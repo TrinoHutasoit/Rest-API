@@ -20,9 +20,10 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
   test:
-    name: Test API IV
-    needs: build ====>1
+    name: Test API II
+    needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3 ====>2
       - name: Test API III
         run: mvn clean verify
