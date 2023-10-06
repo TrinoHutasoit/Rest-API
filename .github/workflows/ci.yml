@@ -17,5 +17,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Build with Maven
+      - name: Build with Maven aja I
         run: mvn --batch-mode --update-snapshots package
+      - name: Test API III
+        run: mvn clean verify
